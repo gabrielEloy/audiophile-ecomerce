@@ -7,6 +7,7 @@ declare module "styled-components" {
         lightOrange: string;
         absoluteWhite: string;
         absoluteDark: string;
+        darkGray: string;
     }
   }
 
@@ -19,5 +20,6 @@ export const theme = {
     lightGray: '#FAFAFA',
     lightOrange: '#FBAF85',
     absoluteWhite: '#FFFFFF',
-    absoluteDark: '#000000'
+    absoluteDark: '#000000',
+    darkGray: '#979797'
 }

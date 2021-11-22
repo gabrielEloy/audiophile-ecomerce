@@ -4,6 +4,6 @@ export const OverLine = styled.span`
     font-family: 'Manrope', sans-serif;
     font-size: 14px;
     letter-spacing: 10px;
-    color: ${({theme}) => theme.primaryOrange};
+    color: ${({theme, color}) => color ||theme.primaryOrange};
     display: block;
 `
