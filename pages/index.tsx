@@ -1,8 +1,9 @@
-import type { NextPage } from 'next'
-import { Header } from '../src/components/Header'
-import { H1, H2, H3, H4, H5, H6 } from '../src/foundation/Typography/headers'
-import { OverLine } from '../src/foundation/Typography/overLine'
-import { SubTitle } from '../src/foundation/Typography/subTitle'
+import type { NextPage } from "next";
+
+import { Header } from "../src/components/Header";
+import { H1, H2, H3, H4, H5, H6 } from "../src/foundation/Typography/headers";
+import { OverLine } from "../src/foundation/Typography/overLine";
+import { SubTitle } from "../src/foundation/Typography/subTitle";
 
 const Home: NextPage = () => {
   return (
@@ -17,7 +18,7 @@ const Home: NextPage = () => {
       <OverLine>Teste de overline</OverLine>
       <SubTitle>Teste de subtitle</SubTitle>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
