@@ -5,5 +5,5 @@ export const SubTitle = styled.span`
     font-weight: bold;
     font-size: 13px;
     letter-spacing: 1px;
-    color: ${({theme}) => theme.primaryOrange};
+    color: ${({theme, color}) => color || theme.primaryOrange };
 `
