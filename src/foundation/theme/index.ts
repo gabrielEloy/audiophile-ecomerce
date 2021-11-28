@@ -1,3 +1,4 @@
+import {dimensions} from '../dimensions'
 declare module "styled-components" {
     export interface DefaultTheme {
         primaryOrange: string;
@@ -8,6 +9,11 @@ declare module "styled-components" {
         absoluteWhite: string;
         absoluteDark: string;
         darkGray: string;
+        dimensions: {
+            mobile: 375;
+            tablet: 768;
+            desktop: 1440;
+        }
     }
   }
 
@@ -21,5 +27,6 @@ export const theme = {
     lightOrange: '#FBAF85',
     absoluteWhite: '#FFFFFF',
     absoluteDark: '#000000',
-    darkGray: '#979797'
+    darkGray: '#979797',
+    dimensions
 }

@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import { H1, H2, H3, H4, H5, H6 } from "../src/foundation/Typography/Headers";
 import { OverLine } from "../src/foundation/Typography/OverLine";
 import { SubTitle } from "../src/foundation/Typography/subTitle";
+import { IImg } from "../src/interfaces/IImg";
 import { Highlight } from "../src/pageSections/home/Highlight";
 
 export async function getStaticProps() {
@@ -12,7 +13,14 @@ export async function getStaticProps() {
     description:
       "Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.",
     path: "undefined for now",
-    img: `https://audiophile-assets.s3.amazonaws.com/earphone.png`,
+    img: {
+      mobile:
+        "https://audiophile-assets.s3.amazonaws.com/headphone-transparent-background.png",
+      tablet:
+        "https://audiophile-assets.s3.amazonaws.com/headphone-transparent-background.png",
+      desktop:
+        "https://audiophile-assets.s3.amazonaws.com/headphone-transparent-background.png",
+    },
   };
 
   return {
@@ -23,14 +31,14 @@ export async function getStaticProps() {
 }
 
 interface IHome {
-  label: string;
-  title: string;
-  description: string;
-  path: string;
-  img: string;
+  highlight: {
+    label: string;
+    title: string;
+    description: string;
+    path: string;
+    img: IImg;
+  };
 }
-
-
 
 const Home = (props: IHome) => {
   console.log({ props });
@@ -42,7 +50,7 @@ const Home = (props: IHome) => {
        Headphones"
         description="Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast."
         path="undefined for now"
-        img={props.img}
+        img={props.highlight.img}
       />
       <H1>teste de H1</H1>
       <H2>teste de H2</H2>

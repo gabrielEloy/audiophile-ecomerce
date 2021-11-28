@@ -2,23 +2,43 @@ import styled from 'styled-components'
 
 
 const HighlightStyles = styled.div`
-    width: 100%;
+    width: 100vw;   
     height: 633px;
     background: ${({theme}) => theme.primaryDark};
-    padding: 0 165px;
+    padding: 0 10vw;
     position: relative;
     display: flex;
-
+    z-index: 2;
+    @media (max-width: ${({theme}) => theme.dimensions.tablet}px){
+        justify-content: center;
+        align-items: center;
+    }
+    
 
     .content-container{
+        position: relative;
         flex: 1;
         padding-top: 129px;
         max-width: 398px;
+        @media (max-width: ${({theme}) => theme.dimensions.tablet}px){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+}
+
+        .label, .title, .description, .button{
+            position: relative;
+            z-index: 2;
+        }
+
         .label{
-            margin-bottom: 24px
+            margin-bottom: 24px;
+        
         }
         .description{
-            margin-bottom: 40px
+            margin-bottom: 40px;
         }
     }
 
@@ -27,8 +47,21 @@ const HighlightStyles = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        
         img{
-            height: 70%;
+            
+            filter: drop-shadow(0 0 6.75rem ${({theme}) => theme.lightGray}59);
+            margin-top: 80px;
+            width: 400px;
+            height: auto;
+        }
+
+
+        @media (max-width: ${({theme}) => theme.dimensions.tablet}px){
+            position: absolute;
+            left: auto;
+            right: auto;
+            z-index: 1;
         }
     }
 `
