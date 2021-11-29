@@ -1,12 +1,13 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
+
+import useResizeObserver from "use-resize-observer";
+
 import LogoSVG from "../../../public/assets/svg/audiophile-logo";
 import ShoppingCartSVG from "../../../public/assets/svg/shopping-cart";
 import { SubTitle } from "../../foundation/Typography/SubTitle";
 import { getCurrentScreenSize } from "../../services/dimensions";
 import HeaderWrapper from "./HeaderStyles";
-import useResizeObserver from "use-resize-observer";
-
-interface Props {}
+import HamburgerMenuSVG from '../../../public/assets/svg/hamburger-menu'
 
 const dummyOptions = [
   {
@@ -23,22 +24,23 @@ const dummyOptions = [
   },
 ];
 
-export const Header = (props: Props) => {
-  const {width, ref} = useResizeObserver()
-  
-  const [screenSize, setScreenSize] = useState('')
+export const Header = () => {
+  const { width, ref } = useResizeObserver();
+
+  const [screenSize, setScreenSize] = useState("");
 
   useEffect(() => {
     const currentScreenSize = getCurrentScreenSize(window.innerWidth);
-    
-    if(screenSize !== currentScreenSize){
-      setScreenSize(currentScreenSize)
+
+    if (screenSize !== currentScreenSize) {
+      setScreenSize(currentScreenSize);
     }
-  }, [width])
+  }, [width]);
 
   return (
     <HeaderWrapper ref={ref}>
       <div className="section">
+      {screenSize !== 'desktop' && (<HamburgerMenuSVG className="hamburger"/>)}
         <LogoSVG />
       </div>
       {screenSize === "desktop" && (

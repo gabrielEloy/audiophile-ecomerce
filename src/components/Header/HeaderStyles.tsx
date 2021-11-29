@@ -9,9 +9,15 @@ const HeaderWrapper = styled.nav`
   padding: 0 165px;
   justify-content: space-between;
   box-sizing: border-box;
+  position: relative;
 
   .section {
     flex: 1;
+  }
+
+  .hamburger{
+    position: absolute;
+    left: 30px;
   }
 
   .cart {

@@ -40,8 +40,7 @@ export const Highlight = (props: IHighlightProps) => {
             </div>
             <div className="image-container">
                 <img
-                src={img}
-                height={200}/>
+                src={img} />
             </div>
         </HighlightStyles>
     )

@@ -1,5 +1,3 @@
-import type { NextPage } from "next";
-
 import { H1, H2, H3, H4, H5, H6 } from "../src/foundation/Typography/Headers";
 import { OverLine } from "../src/foundation/Typography/OverLine";
 import { SubTitle } from "../src/foundation/Typography/subTitle";
@@ -41,7 +39,6 @@ interface IHome {
 }
 
 const Home = (props: IHome) => {
-  console.log({ props });
   return (
     <div>
       <Highlight

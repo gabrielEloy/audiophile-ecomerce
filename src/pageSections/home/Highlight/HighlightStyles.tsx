@@ -51,8 +51,7 @@ const HighlightStyles = styled.div`
         img{
             
             filter: drop-shadow(0 0 6.75rem ${({theme}) => theme.lightGray}59);
-            margin-top: 80px;
-            width: 400px;
+            width: 350px;
             height: auto;
         }
 
@@ -62,6 +61,12 @@ const HighlightStyles = styled.div`
             left: auto;
             right: auto;
             z-index: 1;
+
+            img {
+                width: 80%;
+                min-width: 330px;
+                margin-top: 30px;
+            }
         }
     }
 `
