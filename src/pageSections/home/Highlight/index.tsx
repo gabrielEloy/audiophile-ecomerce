@@ -8,6 +8,7 @@ import { Text } from '../../../foundation/Typography/Text';
 import { PrimaryButton } from '../../../components/Buttons';
 import { IImg } from '../../../interfaces/IImg';
 import { getCurrentScreenSize } from '../../../services/dimensions';
+import { useCurrentScreenSize } from '../../../hooks/useCurrentScreenSize';
 
 
 interface IHighlightProps {
@@ -20,18 +21,21 @@ interface IHighlightProps {
 
 
 export const Highlight = (props: IHighlightProps) => {
-    const [img, setImage] = useState('')
+    const [img, setImage] = useState('');
+    const {ref, screenSize} = useCurrentScreenSize();
+
+    
     
     useEffect(() => {
         const screenSize = getCurrentScreenSize(window.innerWidth)
         const img = props.img[screenSize];
 
-    setImage(img)
+        setImage(img);
     }, [])
     
     return (
-        <HighlightStyles>
-            <Divider top={0} left={165} right={165}/>
+        <HighlightStyles ref={ref}>
+            {screenSize === 'desktop' && <Divider top={0} left={165} right={165}/>}
             <div className="content-container">
                 <OverLine className={"label"} color={theme.darkGray}>{props.label}</OverLine>
                 <H1 className="title" color={theme.absoluteWhite}>{props.title}</H1>

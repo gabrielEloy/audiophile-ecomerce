@@ -12,6 +12,7 @@ const HighlightStyles = styled.div`
     @media (max-width: ${({theme}) => theme.dimensions.tablet}px){
         justify-content: center;
         align-items: center;
+        
     }
     
 
@@ -22,8 +23,10 @@ const HighlightStyles = styled.div`
         max-width: 398px;
         @media (max-width: ${({theme}) => theme.dimensions.tablet}px){
             display: flex;
+            text-align: center;
             flex-direction: column;
             align-items: center;
+            padding-top: 0px;
         }
         
 }
@@ -64,9 +67,18 @@ const HighlightStyles = styled.div`
 
             img {
                 width: 80%;
-                min-width: 330px;
-                margin-top: 30px;
+                min-width: 300px;
+                
+                max-width: 600px;
             }
+        }
+
+        @media (max-width: ${({theme}) => theme.dimensions.mobile}px){
+           img{
+            width: 90%;
+            min-width: 280px;
+            
+           }
         }
     }
 `

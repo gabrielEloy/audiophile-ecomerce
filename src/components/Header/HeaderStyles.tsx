@@ -6,7 +6,7 @@ const HeaderWrapper = styled.nav`
   height: 100px;
   display: flex;
   align-items: center;
-  padding: 0 165px;
+  padding: 0 10%;
   justify-content: space-between;
   box-sizing: border-box;
   position: relative;
@@ -15,9 +15,9 @@ const HeaderWrapper = styled.nav`
     flex: 1;
   }
 
-  .hamburger{
-    position: absolute;
-    left: 30px;
+  .hamburger {
+    margin-top: 5px;
+    margin-right: 10px;
   }
 
   .cart {

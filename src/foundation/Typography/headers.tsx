@@ -6,6 +6,10 @@ export const H1 = styled.h1`
     font-size: 56px;
     letter-spacing: 2px;
     color: ${({theme, color}) => color || theme.absoluteDark};
+
+    @media (max-width: ${({theme}) => theme.dimensions.mobile}px) {
+        font-size: 36px;
+    }
 `
 export const H2 = styled.h2`
     font-family: 'Manrope', sans-serif;

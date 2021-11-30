@@ -7,4 +7,8 @@ export const Text = styled.p`
     line-height: 25px;
     margin: 0;
     padding: 0;
+
+    @media (max-width: ${({theme}) => theme.dimensions.mobile}px) {
+        font-size: 15px;
+    }
 `
