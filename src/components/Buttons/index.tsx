@@ -1,6 +1,7 @@
-import styled from "styled-components";
+import { motion } from 'framer-motion';
+import styled from 'styled-components';
 
-export const PrimaryButton = styled.button`
+export const PrimaryButton = styled(motion.button)`
   padding: 15px 30px;
   border: none;
   background: ${({ theme }) => theme.primaryOrange};

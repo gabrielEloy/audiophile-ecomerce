@@ -2,6 +2,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["audiophile-assets.s3.amazonaws.com"]
-  }
-}
+    domains: ['audiophile-assets.s3.amazonaws.com'],
+  },
+};

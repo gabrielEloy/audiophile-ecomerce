@@ -1,14 +1,8 @@
-import * as React from "react"
+import * as React from 'react';
 
 function ShoppingCartSVG(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg
-      width={24}
-      height={20}
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+    <svg width={24} height={20} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -16,7 +10,7 @@ function ShoppingCartSVG(props: React.SVGProps<SVGSVGElement>) {
         fill="#fff"
       />
     </svg>
-  )
+  );
 }
 
-export default ShoppingCartSVG
+export default ShoppingCartSVG;

@@ -1,23 +1,20 @@
-import { H1, H2, H3, H4, H5, H6 } from "../src/foundation/Typography/Headers";
-import { OverLine } from "../src/foundation/Typography/OverLine";
-import { SubTitle } from "../src/foundation/Typography/Subtitle";
-import { IImg } from "../src/interfaces/IImg";
-import { Highlight } from "../src/pageSections/home/Highlight";
+import { H1, H2, H3, H4, H5, H6 } from '../src/foundation/Typography/Headers';
+import { OverLine } from '../src/foundation/Typography/OverLine';
+import { SubTitle } from '../src/foundation/Typography/Subtitle';
+import { IImg } from '../src/interfaces/IImg';
+import { Highlight } from '../src/pageSections/home/Highlight';
 
 export async function getStaticProps() {
   const highlight = {
-    label: "New Product",
-    title: "XX99 Mark II Headphones",
+    label: 'New Product',
+    title: 'XX99 Mark II Headphones',
     description:
-      "Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.",
-    path: "undefined for now",
+      'Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.',
+    path: 'undefined for now',
     img: {
-      mobile:
-        "https://audiophile-assets.s3.amazonaws.com/headphone-transparent-background.png",
-      tablet:
-        "https://audiophile-assets.s3.amazonaws.com/headphone-transparent-background.png",
-      desktop:
-        "https://audiophile-assets.s3.amazonaws.com/headphone-transparent-background.png",
+      mobile: 'https://audiophile-assets.s3.amazonaws.com/headphone-transparent-background.png',
+      tablet: 'https://audiophile-assets.s3.amazonaws.com/headphone-transparent-background.png',
+      desktop: 'https://audiophile-assets.s3.amazonaws.com/headphone-transparent-background.png',
     },
   };
 

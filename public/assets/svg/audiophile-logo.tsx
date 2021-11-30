@@ -1,14 +1,8 @@
-import * as React from "react"
+import * as React from 'react';
 
 function LogoSVG(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg
-      width={143}
-      height={25}
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+    <svg width={143} height={25} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -16,7 +10,7 @@ function LogoSVG(props: React.SVGProps<SVGSVGElement>) {
         fill="#fff"
       />
     </svg>
-  )
+  );
 }
 
-export default LogoSVG
+export default LogoSVG;

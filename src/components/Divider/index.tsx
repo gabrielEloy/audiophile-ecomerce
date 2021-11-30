@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 interface IDivider {
   top?: number;
@@ -9,7 +9,7 @@ interface IDivider {
 }
 
 export const Divider = styled.hr<IDivider>`
-  padding: ${({ padding }) => padding || "0px"};
+  padding: ${({ padding }) => padding || '0px'};
   border: none;
   height: 1px;
   background: ${({ theme }) => theme.darkGray};

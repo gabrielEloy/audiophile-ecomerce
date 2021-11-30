@@ -1,15 +1,14 @@
-import styled from 'styled-components'
-
+import styled from 'styled-components';
 
 const HighlightStyles = styled.div`
     width: 100vw;   
     height: 633px;
-    background: ${({theme}) => theme.primaryDark};
+    background: ${({ theme }) => theme.primaryDark};
     padding: 0 10vw;
     position: relative;
     display: flex;
     z-index: 2;
-    @media (max-width: ${({theme}) => theme.dimensions.tablet}px){
+    @media (max-width: ${({ theme }) => theme.dimensions.tablet}px){
         justify-content: center;
         align-items: center;
         
@@ -21,7 +20,7 @@ const HighlightStyles = styled.div`
         flex: 1;
         padding-top: 129px;
         max-width: 398px;
-        @media (max-width: ${({theme}) => theme.dimensions.tablet}px){
+        @media (max-width: ${({ theme }) => theme.dimensions.tablet}px){
             display: flex;
             text-align: center;
             flex-direction: column;
@@ -53,13 +52,13 @@ const HighlightStyles = styled.div`
         
         img{
             
-            filter: drop-shadow(0 0 6.75rem ${({theme}) => theme.lightGray}59);
+            filter: drop-shadow(0 0 6.75rem ${({ theme }) => theme.lightGray}59);
             width: 350px;
             height: auto;
         }
 
 
-        @media (max-width: ${({theme}) => theme.dimensions.tablet}px){
+        @media (max-width: ${({ theme }) => theme.dimensions.tablet}px){
             position: absolute;
             left: auto;
             right: auto;
@@ -73,7 +72,7 @@ const HighlightStyles = styled.div`
             }
         }
 
-        @media (max-width: ${({theme}) => theme.dimensions.mobile}px){
+        @media (max-width: ${({ theme }) => theme.dimensions.mobile}px){
            img{
             width: 90%;
             min-width: 280px;
@@ -81,7 +80,6 @@ const HighlightStyles = styled.div`
            }
         }
     }
-`
-
+`;
 
 export default HighlightStyles;

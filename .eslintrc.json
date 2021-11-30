@@ -37,7 +37,15 @@
   "rules": {
     "comma-dangle": ["error", "always-multiline"],
     "semi": "error",
-    "prettier/prettier": "error",
+    "prettier/prettier": [
+      1,
+      {
+        "useTabs": false,
+        "printWidth": 120,
+        "tabWidth": 2,
+        "singleQuote": true
+      }
+    ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": 0,
