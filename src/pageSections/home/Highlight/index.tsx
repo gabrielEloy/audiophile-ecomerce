@@ -19,6 +19,7 @@ interface IHighlightProps {
   description: string;
   path: string;
   img: IImg;
+  className?: string;
 }
 
 export const Highlight = (props: IHighlightProps) => {
@@ -33,7 +34,7 @@ export const Highlight = (props: IHighlightProps) => {
   }, []);
 
   return (
-    <HighlightStyles ref={ref}>
+    <HighlightStyles ref={ref} className={props.className}>
       {screenSize === 'desktop' && <Divider top={0} left={165} right={165} />}
       <motion.div className="content-container">
         <OverLine
@@ -77,7 +78,12 @@ export const Highlight = (props: IHighlightProps) => {
         </PrimaryButton>
       </motion.div>
       <div className="image-container">
-        <motion.img initial={{opacity: 0}}  animate={{opacity: 1}} transition={{ delay: .7, duration: 2 }} src={img} />
+        <motion.img
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.7, duration: 2 }}
+          src={img}
+        />
       </div>
     </HighlightStyles>
   );
