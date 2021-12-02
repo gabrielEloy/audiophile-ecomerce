@@ -31,7 +31,7 @@ export const Highlight = (props: IHighlightProps) => {
     const img = props.img[screenSize];
 
     setImage(img);
-  }, []);
+  }, [props.img]);
 
   return (
     <HighlightStyles ref={ref} className={props.className}>

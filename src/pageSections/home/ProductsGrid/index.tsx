@@ -2,6 +2,6 @@ import React from 'react';
 
 interface Props {}
 
-export const ProductsGrid = (props: Props) => {
+export const ProductsGrid = () => {
   return <div></div>;
 };

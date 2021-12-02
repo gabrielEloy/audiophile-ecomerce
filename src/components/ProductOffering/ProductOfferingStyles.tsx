@@ -16,8 +16,7 @@ const ProductOfferingStyles = styled(motion.div)`
   img {
     width: 100px;
     position: absolute;
-    top: -60px;
-    filter: drop-shadow(0px 30px 10px rgba(0, 0, 0, 0.5));
+    top: -30px;
   }
   .actions-container {
     display: flex;
