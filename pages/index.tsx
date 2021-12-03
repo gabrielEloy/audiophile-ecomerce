@@ -1,7 +1,4 @@
 import { ProductOffering } from '../src/components/ProductOffering';
-import { H1, H2, H3, H4, H5, H6 } from '../src/foundation/Typography/Headers';
-import { OverLine } from '../src/foundation/Typography/OverLine';
-import { SubTitle } from '../src/foundation/Typography/Subtitle';
 import { IImg } from '../src/interfaces/IImg';
 import { Highlight } from '../src/pageSections/home/Highlight';
 import { ProductsGrid } from '../src/pageSections/home/ProductsGrid';
@@ -36,12 +33,30 @@ export async function getStaticProps() {
     },
   ];
 
+  const announcementsGrid = {
+    main: {
+      title: 'ZX9 SPEAKER',
+      description: 'Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.',
+      img: 'https://audiophile-assets.s3.amazonaws.com/image-speaker-zx9.png',
+    },
+  };
+
   return {
     props: {
       highlight,
       listings,
+      announcementsGrid,
     },
   };
+}
+
+export interface IAnnouncements {
+  main: Main;
+}
+export interface Main {
+  title: string;
+  description: string;
+  img: string;
 }
 
 interface IHome {
@@ -56,6 +71,7 @@ interface IHome {
     name: string;
     img: string;
   }[];
+  announcementsGrid: IAnnouncements;
 }
 
 const Home = (props: IHome) => {
@@ -76,7 +92,7 @@ const Home = (props: IHome) => {
             <ProductOffering image={listing.img} title={listing.name} key={index} />
           ))}
         </div>
-        <ProductsGrid />
+        <ProductsGrid announcements={props.announcementsGrid} />
       </div>
     </HomeStyles>
   );

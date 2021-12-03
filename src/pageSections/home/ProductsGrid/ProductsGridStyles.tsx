@@ -6,7 +6,7 @@ const ProductGridStyles = styled.div`
   grid-template-areas:
     'main main'
     'middle middle'
-    'bottomleft bottomright'; 
+    'bottomleft bottomright';
   grid-row-gap: 48px;
   grid-column-gap: 30px;
 
@@ -15,6 +15,45 @@ const ProductGridStyles = styled.div`
     background: ${({ theme }) => theme.primaryOrange};
     width: 100%;
     height: 560px;
+    display: flex;
+    overflow: hidden;
+
+    .image-container {
+      flex: 3;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      position: relative;
+
+      .animated-circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 1px solid ${({ theme }) => theme.absoluteWhite};
+        position: absolute;
+        z-index: 1;
+        transform: translate(5%, 30%);
+        pointer-events:none;
+      }
+      img {
+        width: 60%;
+        transform: translateY(3%);
+        z-index: 2;
+      }
+    }
+    .text-container {
+      flex: 2;
+      padding: 133px 95px 0 0;
+      text-align: left;
+
+      .title:last-of-type {
+        margin-bottom: 24px;
+      }
+
+      .description{
+        margin-bottom: 40px;
+      }
+    }
   }
   .middle-announcement {
     grid-area: middle;
