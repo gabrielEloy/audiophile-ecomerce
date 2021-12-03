@@ -33,7 +33,7 @@ const ProductGridStyles = styled.div`
         position: absolute;
         z-index: 1;
         transform: translate(5%, 30%);
-        pointer-events:none;
+        pointer-events: none;
       }
       img {
         width: 60%;
@@ -50,7 +50,7 @@ const ProductGridStyles = styled.div`
         margin-bottom: 24px;
       }
 
-      .description{
+      .description {
         margin-bottom: 40px;
       }
     }
@@ -60,6 +60,11 @@ const ProductGridStyles = styled.div`
     background: ${({ theme }) => theme.primaryGray};
     width: 100%;
     height: 320px;
+    padding: 101px 95px;
+
+    .title{
+      margin-bottom: 32px;
+    }
   }
   .bottom-left-announcement {
     grid-area: bottomleft;

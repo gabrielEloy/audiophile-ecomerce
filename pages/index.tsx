@@ -39,6 +39,14 @@ export async function getStaticProps() {
       description: 'Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.',
       img: 'https://audiophile-assets.s3.amazonaws.com/image-speaker-zx9.png',
     },
+    secondary: {
+      title: 'ZX7 SPEAKER',
+      img: 'https://audiophile-assets.s3.amazonaws.com/Bitmap.png',
+    },
+    tertiary: {
+      title: 'IZ9 HEADPHONES',
+      img: 'https://audiophile-assets.s3.amazonaws.com/earphones.png'
+    }
   };
 
   return {
@@ -52,12 +60,23 @@ export async function getStaticProps() {
 
 export interface IAnnouncements {
   main: Main;
+  secondary: Secondary;
+  tertiary: Tertiary;
 }
 export interface Main {
   title: string;
   description: string;
   img: string;
 }
+export interface Secondary {
+  title: string;
+  img: string;
+}
+export interface Tertiary {
+  title: string;
+  img: string;
+}
+
 
 interface IHome {
   highlight: {
