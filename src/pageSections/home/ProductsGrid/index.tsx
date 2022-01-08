@@ -56,8 +56,8 @@ export const ProductsGrid = ({ announcements }: Props) => {
         className="bottom-left-announcement"
       ></div>
       <div className="bottom-right-announcement">
-      <H4 className="title">{announcements.tertiary.title}</H4>
-        <PrimaryButton backgroundColor={theme.absoluteDark}>See Product</PrimaryButton>
+      {/* <H4 className="title">{announcements.tertiary.title}</H4>
+        <PrimaryButton backgroundColor={theme.absoluteDark}>See Product</PrimaryButton> */}
       </div>
     </ProductGridStyles>
   );
